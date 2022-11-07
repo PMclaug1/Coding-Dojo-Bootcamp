@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form>
+    <div>
+        <label>First Name: *</label>
+        <input type="text" name="First_Name">
+    </div>
+    <div>
+        <label>Last Name: *</label>
+        <input type="text" name="Last_Name">
+    </div>
+    <div>
+        <label>Email Address: *</label>
+        <input type="text" name="Email_Address">
+    </div>
+    <div>
+        <label>Password: *</label>
+        <input type="password" name="Password">
+    </div>
+    <div>
+        <label>Confirm Password: *</label>
+        <input type="password" name="Confirm_Password">
+    </div>
+    <div>
+        <label>Birthday: *</label>
+        <input type="date" name="Birthday">
+    </div> 
+    <div>
+        <label>Gender Identity:</label> 
+        <input type="radio" name="gender" value="Male" id="Male">
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" value="Female" id="Female">
+        <label for="Female">Female</label>
+        <input type="radio" name="gender" value="Non_Binary" id="Non_Binary">
+        <label for="Female">Non-binary</label>
+        <input type="radio" name="gender" value="I_prefer_not_to_answer" id="I_prefer_not_to_answer">
+        <label for="I_prefer_not_to_answer">I prefer not to answer</label>
+    </div>
+    <div>
+        <label>A short descirption about myself:</label>
+        <textarea name="A_short_description_about_myself" cols="20" rows="3"></textarea>
+    </div>
+    <div>
+        <label>Favorite Language:</label>
+        <select name="Favorite Language:">
+            <option>Javascript</option>
+            <option>HTML</option>
+            <option>CSS</option>
+        </select>
+    </div>
+    <div>
+        <input type="checkbox" name="Yes, I would like to receive periodic email updates" 
+        id="Yes_I_would_like_to_receive_periodic_updates" checked >
+        <label>Yes, I would like to receive periodic updates</label>
+    </div>
+    <div>
+    <input type="submit" value="Create Account" >
+    </div>
+    <div>* Indicates a required field</div>
+    </form>
+</body>
+</html>
