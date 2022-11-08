@@ -1,0 +1,22 @@
+body {
+    background-color: papayawhip;
+}
+h1 {
+    background-color: rebeccapurple;
+    color: antiquewhite;
+    font-size: 50px;
+}
+.green {
+    background-color: mediumseagreen;
+}
+#red {
+    background-color: tomato;
+}
+* {
+    outline: 1px solid red;
+}
+.main p {
+    color: darkslateblue;
+    font-style: italic;
+    font-size: 30px;
+}
