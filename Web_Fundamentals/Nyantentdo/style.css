@@ -1,0 +1,29 @@
+a {
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    list-style:  none;
+    margin-right: 20px;
+    background-color: darkseagreen;
+    border-radius: 5px;
+}
+
+.navbar-links li {
+    margin-right: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: cadetblue;
+}
+
+.navbar h1 {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
