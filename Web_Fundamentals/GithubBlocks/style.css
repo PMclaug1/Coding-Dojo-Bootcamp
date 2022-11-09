@@ -34,6 +34,7 @@ span {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    margin-top: 20px;
     padding: 10px;
 }
 .block2 {
@@ -47,6 +48,7 @@ span {
     background-color: whitesmoke;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
     padding: 10px;
 }
 
