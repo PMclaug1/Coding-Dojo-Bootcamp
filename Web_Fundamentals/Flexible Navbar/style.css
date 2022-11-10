@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid white;
+    background: slategray;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+li {
+    margin-right: 10px;
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    color: white;
+    padding-left: 10px;
+}
+
+button {
+    background-color: teal;
+    color: white;
+}
