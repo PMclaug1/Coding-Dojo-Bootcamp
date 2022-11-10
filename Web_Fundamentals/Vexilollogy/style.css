@@ -1,0 +1,67 @@
+.flag {
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.japanflag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgwhite {
+    background-color: white;
+}
+
+.circle {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    /*margin-top: 35px;
+    margin-left: 85px;*/
+
+}
+
+.bgwhite {
+    background-color: white;
+}
+
+.bgred {
+    background-color: red;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+}
+
+.stripered {
+    background-color: red;
+    height: 20%;
+}
+
+.stripeblue {
+    background-color: blue;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    width: 34%;
+}
+
+.displayflex {
+    display: flex;
+}
+
+.bggreen {
+    background-color: green;
+}
+
+.bgorange {
+    background-color: orange;
+}
