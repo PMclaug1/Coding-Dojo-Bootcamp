@@ -131,6 +131,7 @@ span {
     padding-top: 10px;
     border: 2px solid gray;
     border-top: none;
+    padding-left: 50px;
 }
 
 .date {
