@@ -157,7 +157,7 @@ gap: 10px;
 margin-top: 5px;
 padding-left: 5px;
 display: flex;
-justify-content: space-evenly;
+justify-content: space-around;
 }
 
 .userIcon {
@@ -196,6 +196,8 @@ justify-content: space-evenly;
     border-radius: 100%;
     margin-right: 5px;
     text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .request-number1 {
