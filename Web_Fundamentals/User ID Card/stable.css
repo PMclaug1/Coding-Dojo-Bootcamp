@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 800px;
+    margin: 100px;
+}
+
+.body {
+    border: 2px lightgray;
+}
+
+.header {
+    background-color: teal;
+    height: 100px;
+}
+
+.usericon {
+    height: 75px;
+    margin-left: 25px;
+    margin-top: 66px;
+}
+
+.profileBody {
+    border: 2px solid lightgray;
+    border-top: none;
+    padding-top: 50px;
+}
+.userLocation {
+    height: 20px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    margin-left: 10px;
+}
+
+a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+.gear {
+    height: 15px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.imageRow {
+    display: flex;
+    align-items: center;
+}

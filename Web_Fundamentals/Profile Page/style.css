@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: gray;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.navbox {
+    background-color: black;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-left {
+    display: flex;
+    color: white;
+    gap: 20px;
+    align-items: center;
+}
+
+h2 {
+
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+button {
+    color: white;
+    background-color: teal;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-body {
+    display: flex;
+    width: 700px;
+    justify-content: center;
+}
+
+.column1 {
+    background-color: white;
+    width: 65%;
+}
+
+.user-id {
+    background-color: teal;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.user-profile-top {
+    background-color: teal;
+    height: 100px;
+}
+
+.profilepic {
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border: 2px white solid;
+    box-shadow: 0px 0px 5px whitesmoke;
+}
+
+.user-profile-body {
+    background-color: white;
+    border: 2px solid gray;
+    border-top: none;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.userh1 {
+    margin-bottom: 10px;
+}
+
+.userLocation {
+    height: 30px;
+}
+
+.imagerow {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+span {
+    margin-left: 10px;
+}
+
+.gear {
+    height: 25px;
+}
+
+.education {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.box-top {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-bottom {
+    color: black;
+    background-color: white;
+    padding-top: 10px;
+    border: 2px solid gray;
+    border-top: none;
+}
+
+.date {
+    font-weight: light;
+    color: gray;
+}
+
+.column2 {
+    width: 35%;
+}
+
+.requests {
+    background-color: white;
+    height: 200px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid gray;
+}
+
+.request-row {
+gap: 10px;
+margin-top: 5px;
+padding-left: 5px;
+display: flex;
+justify-content: space-evenly;
+}
+
+.userIcon {
+    height: 20px;
+}
+
+.yes-no {
+    height: 20px;
+}
+
+.connections {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid gray;
+}
+
+.connections-row {
+    gap: 10px;
+    margin-top: 5px;
+    padding-left: 5px;
+    display: flex;
+    }
+
+.view-more {
+    width: 100%;
+    border-top: 2px solid gray;
+}
+
+.view-moreText {
+    text-decoration: underline;
+}
+
+.request-number {
+    background-color: lightgray;
+    border-radius: 100%;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.request-number1 {
+    background-color: lightgray;
+    border-radius: 100%;
+    width: 20px;
+    margin-right: 5px;
+    text-align: center;
+}
