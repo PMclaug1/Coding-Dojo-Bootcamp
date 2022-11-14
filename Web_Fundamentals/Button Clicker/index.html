@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = navbar>
+        <div class = navbox>
+            <div class = navbar-left>
+                <h2>Profile</h2>
+            </div>
+            <div>
+            <label>Search</label>
+            <input type = text name="Search">
+            </div>
+            <button class = navbutton onclick="logOut(this)">Log In</button>
+        </div>
+    </div>
+    <div class = container>
+        <div class = profileBody>
+            <div class = column1>
+                <div class = dictionaryEntry>
+                    <div class = entryLeft>
+                        <h2>ninja</h2>
+                        <p class = noun>noun</p>
+                        <p>Plural: <span class = plural>ninjas</span></p>
+                        <button class = likeButton onclick="alert('Ninja was liked')">13 likes</button>
+                    </div>
+                    <div class = entryRight>
+                        <p>
+                            A practicioner skilled in the<br>
+                            <a href="#">Japanese</a> art of <a href="#">ninjutsu</a>
+                        </p>
+                    </div>
+                </div>
+                <div class = dictionaryEntry>
+                    <div class = entryLeft>
+                        <h2>ninja</h2>
+                        <p class = noun>noun</p>
+                        <p>Plural: <span class = plural>ninjas</span></p>
+                        <button class = likeButton onclick="alert('Ninja was liked')">37 likes</button>
+                    </div>
+                    <div class = entryRight>
+                        <p>
+                            A <a href="#">programmer</a> who breaks<br> down problems with <a href="#">zen</a>-like<br>focus
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class = column2>
+                <div class = newEntry>
+                    <div class = entryBox><p>Dojonary is<br>defined by <span class = bold>YOU</span></p></div>
+                    <button id = definitionButton onclick="hide(definitionButton)">Add Definition</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
