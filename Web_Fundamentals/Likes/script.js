@@ -9,5 +9,5 @@ var spans = [
 
 function addLikes(id) {
     likes[id]++;
-    spans[id].innerHTML = likes[id] + "likes(s)";
+    spans[id].innerHTML = likes[id] + " like(s)";
 }

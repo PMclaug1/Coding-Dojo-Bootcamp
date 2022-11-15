@@ -10,3 +10,16 @@ function logOut(element) {
 function hide(element) {
     element.remove();
 }
+
+var likes = [13, 37];
+var spans = [
+    document.querySelector("#likesCount"),
+    document.querySelector("#likesCount1"),
+
+];
+
+function addLikes(id) {
+    likes[id]++;
+    spans[id].innerHTML = likes[id] + " likes";
+    alert('Ninja was liked');
+}
