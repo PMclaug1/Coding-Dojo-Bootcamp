@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Comic Sans MS";
 }
 
 .container {
@@ -18,6 +19,8 @@
     width: 700px;
     display: flex;
     justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .navbar-left {
@@ -40,6 +43,8 @@ ul {
 button {
     color: white;
     background-color: teal;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .container {
@@ -74,9 +79,9 @@ button {
 .profilepic {
     height: 100px;
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 10px;
     border: 2px white solid;
-    box-shadow: 0px 0px 5px whitesmoke;
+    box-shadow: 0px 0px 5px gray;
 }
 
 .user-profile-body {
@@ -84,19 +89,21 @@ button {
     border: 2px solid gray;
     border-top: none;
     padding-top: 50px;
-    padding-left: 50px;
+    padding-left: 10px;
 }
 
 .userh1 {
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .userLocation {
-    height: 30px;
+    height: 25px;
 }
 
 .imagerow {
     margin-bottom: 10px;
+    align-items: center;
 }
 
 p {
@@ -108,7 +115,7 @@ span {
 }
 
 .gear {
-    height: 25px;
+    height: 20px;
 }
 
 .education {
@@ -121,8 +128,12 @@ span {
     background-color: black;
     color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .education-bottom {
@@ -131,7 +142,7 @@ span {
     padding-top: 10px;
     border: 2px solid gray;
     border-top: none;
-    padding-left: 50px;
+    padding-left: 10px;
 }
 
 .date {
@@ -145,23 +156,21 @@ span {
 
 .requests {
     background-color: white;
-    height: 200px;
-    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 2px solid gray;
 }
 
 .request-row {
 gap: 10px;
 margin-top: 5px;
-padding-left: 5px;
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
+padding-left: 5px;
+padding-right: 5px;
 }
 
 .userIcon {
-    height: 20px;
+    height: 25px;
 }
 
 .yes-no {
@@ -169,22 +178,22 @@ justify-content: space-around;
 }
 
 .connections {
-    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 2px solid gray;
 }
 
 .connections-row {
     gap: 10px;
     margin-top: 5px;
     padding-left: 5px;
+    padding-bottom: 5px;
     display: flex;
     }
 
 .view-more {
-    width: 100%;
     border-top: 2px solid gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .view-moreText {
@@ -206,4 +215,8 @@ justify-content: space-around;
     width: 20px;
     margin-right: 5px;
     text-align: center;
+}
+
+.social-bottom {
+    border: 2px solid gray;
 }

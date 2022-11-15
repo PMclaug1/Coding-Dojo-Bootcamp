@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .navbar {
@@ -79,6 +80,7 @@ h2 {
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 5px;
+    box-shadow: 2px 2px black;
 }
 
 .entryRight {
@@ -116,4 +118,7 @@ h2 {
 #definitionButton {
     width: 90%;
     background-color: lightgreen;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 2px 2px black;
 }

@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.body {
+    width: 700px;
+}
+
+.navbar {
+    color: white;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.feed {
+    color: black;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.user-info {
+    width: 20%;
+}
+
+.infoBox {
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.userIcon {
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.linkText {
+    font-size: smaller;
+}
+
+.userFeed {
+    width: 75%;
+}
+
+
+.feedRow {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    align-items: center;
+}
+
+.feedLeft {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+.likeButton {
+    background-color: yellow;
+    padding: 2px;
+    box-shadow: 2px 2px black;
+}
+
+.feedStyle {
+    border: 2px solid black;
+    margin-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100px;
+    align-items: center;
+}
