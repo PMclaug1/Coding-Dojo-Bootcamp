@@ -4,13 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Poke Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class = "main">
+
+        <div class = "col1">
+            <img class = "col1Img" src="poke-bowl.jpg" alt="poke icon">
+            <h4>About Us</h4>
+            <h4>Menus</h4>
+            <h4>Catering</h4>
+            <h4 id="ulTitle">Hours</h4>
+            <ul>
+                <li>mon - fri 11 am - 10 pm</li>
+                <li>sat 12 pm - 1 am</li>
+                <li>sun 12 pm - 9 pm</li>
+            </ul>
+            <h4>Locations</h4>
+            <img class="col1Img" src="map icon.webp" alt="Pokebowl Locations Map">
+            <h4 onclick="alert('Call us at 555-5555')">Contact Us</h4>
+        </div>
+
+        <div class="col2">
+            <video src="pexels-mikhail-nilov-6892465.mp4" muted autoplay></video>
+            <div class="content">
+                <div class="orderGuide">
+                    <h1>Poke your way</h1>
+                    <div class="row" onmouseover="showChoices('#step1')" onmouseout="hideChoices('#step1')">
+                        <h1 class="step">1</h1>
+                        <div class="step-text">
+                            <h2>choose your protein</h2>
+                            <h4 id="step1" class="hidden">salmon, tuna, tofu</h4>
+                        </div>
+
+                    </div>
+                    <div class="row tab-1" onmouseover="showChoices('#step2')" onmouseout="hideChoices('#step2')">
+                        <h1 class="step">2</h1>
+                        <div class="step-text">
+                            <h2>pick your base</h2>
+                            <h4 id="step2" class="hidden">rice, quinoa, soba noodles</h4>
+                        </div>
+
+                    </div>
+                    <div class="row tab-2" onmouseover="showChoices('#step3')" onmouseout="hideChoices('#step3')">
+                        <h1 class="step">3</h1>
+                        <div class="step-text">
+                            <h2>select a marinade</h2>
+                            <h4 id="step3" class="hidden">ponzu, sriracha aoli, sesame miso</h4>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="poke-def">
+                    <h1>poke</h1>
+                    <h4>noun</h4>
+                    <h4>
+                        Pronounced (Po-kay)<br>
+                        a popular Hawaiian dish of<br>
+                        marinated, diced raw fish<br>
+                        served over rice
+                    </h4>
+                </div>
+            </div>
+        </div>
 
 
+    </div>
     <script src=script.js></script>
 </body>
 </html>

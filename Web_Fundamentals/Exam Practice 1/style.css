@@ -1,4 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Balsamiq Sans', cursive;;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.col1Img {
+    height: 150px;
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+.col1 h4 {
+    margin-bottom: 50px;
+}
+
+.col1 ul {
+    margin-bottom: 50px;
+}
+
+#ulTitle {
+    margin-bottom: 10px;
+}
+
+
+.tab-1 {
+    margin-left: 40px;
+}
+
+.tab-2 {
+    margin-left: 80px;
+}
+
+.main {
+    display: flex;
+}
+
+.col1 {
+    flex: 1;
+    padding: 30px;
+}
+
+.col2 {
+    flex: 3;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    padding-left: 0px;
+    gap: 20px;
+}
+
+.orderGuide {
+    flex: 2;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 15px;
+}
+
+.orderGuide h1 {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.row:hover {
+    background-color: rgb(96, 170, 246);
+}
+
+.step {
+    color: dodgerblue;
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    margin: 10px;
+}
+
+.step-text {
+
+}
+
+.poke-def {
+    flex: 2;
+    background-color: crimson;
+    color: white;
+    border-radius: 15px;
+}
+
+ul * {
+    color: lightgray;
+    list-style: none;
+}
+
+.poke-def h1 {
+    margin: 10px;
+}
+.poke-def h4 {
+    margin: 10px;
 }
