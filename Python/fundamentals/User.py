@@ -30,5 +30,11 @@ class User:
 my_user = User("Patrick", "McLaughlin", "test@gmail.com", 99)
 my_user.display_info()
 my_user.enroll()
-my_user.spend_points(100)
+my_user.spend_points(50)
 my_user.display_info()
+
+user2 = User("Jake", "Smith", "jsm@gmail.com", 50)
+user2.display_info()
+user2.enroll()
+user2.spend_points(80)
+user2.display_info()
