@@ -16,8 +16,12 @@ class User:
         print(f"current points: {self.gold_card_points}")
 
     def enroll(self):
+        if self.is_rewards_member:
+            print("user already a member.")
+            return False
         self.is_rewards_member = True
         self.gold_card_points = 200
+
 
     def spend_points(self,amount):
         self.gold_card_points -= amount
