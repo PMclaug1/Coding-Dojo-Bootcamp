@@ -61,10 +61,12 @@ dojo = {
 }
 
 
-def printInfo(dojo):
-        print(len(dojo['locations']))
-        print(dojo['locations'])
-        print(len(dojo['instructors']))
-        print(dojo['instructors'])
+def printInfo(dict):
+    for key in dict:
+        print(len(dict[key]))
+        for item in dict[key]:
+            print(item)
+
+
 
 printInfo(dojo)
