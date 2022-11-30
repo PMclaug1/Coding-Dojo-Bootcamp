@@ -1,4 +1,4 @@
-"""
+
 #1
 def number_of_food_groups():
     return 5
@@ -10,7 +10,7 @@ print(number_of_food_groups())
 def number_of_military_branches():
     return 5
 print(number_of_days_in_a_week_silicon_or_triangle_sides() + number_of_military_branches())
-# prediction 5, 1st function not defined
+# not defined
 
 #3
 def number_of_books_on_hold():
@@ -38,7 +38,7 @@ print(x)
 def add(b,c):
     print(b+c)
 print(add(1,2) + add(2,3))
-# prediction 3 & 5
+# prediction 3 & 5 - error can't add
 
 
 #7
@@ -60,7 +60,7 @@ def number_of_oceans_or_fingers_or_continents():
 print(number_of_oceans_or_fingers_or_continents())
 # prediction - 100, 10
 
-"""
+
 #9
 def number_of_days_in_a_week_silicon_or_triangle_sides(b,c):
     if b<c:
@@ -73,12 +73,13 @@ print(number_of_days_in_a_week_silicon_or_triangle_sides(5,3))
 print(number_of_days_in_a_week_silicon_or_triangle_sides(2,3) + number_of_days_in_a_week_silicon_or_triangle_sides(5,3))
 # prediction - 7, 14, 21
 
-"""
+
 #10
 def addition(b,c):
     return b+c
     return 10
 print(addition(3,5))
+# prediction - 8
 
 
 #11
@@ -90,6 +91,7 @@ def foobar():
 print(b)
 foobar()
 print(b)
+# prediction - 500, 500, 300, 500
 
 
 #12
@@ -102,7 +104,7 @@ def foobar():
 print(b)
 foobar()
 print(b)
-
+# prediction - 500, 500, 300, 500
 
 #13
 b = 500
@@ -114,8 +116,7 @@ def foobar():
 print(b)
 b=foobar()
 print(b)
-
-
+# prediction - 500, 500, 300, 300
 #14
 def foo():
     print(1)
@@ -124,7 +125,7 @@ def foo():
 def bar():
     print(3)
 foo()
-
+# prediction - 1, 3, 2
 
 #15
 def foo():
@@ -137,4 +138,4 @@ def bar():
     return 5
 y = foo()
 print(y)
-"""
+# prediction - 1, 3, 5, 10
