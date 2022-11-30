@@ -8,3 +8,6 @@ CSS Library/lib.css
 Copy of FT Dojo Daily Planner.zip
 .gitignore
 CSS Library/lib.zip
+Python/fundamentals/game/game_classes/__pycache__/barbarian.cpython-310.pyc
+Python/fundamentals/game/game_classes/__pycache__/human.cpython-310.pyc
+Python/fundamentals/game/game_classes/__pycache__/cleric.cpython-310.pyc
