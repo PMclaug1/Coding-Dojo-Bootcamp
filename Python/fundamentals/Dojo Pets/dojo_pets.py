@@ -68,7 +68,7 @@ my_treats = ['Cheerios', 'pig hoof', 'Peanut Butter']
 my_pet_food = ['OpenFarm', 'Purina', 'Chow']
 tricks = ['sit','jump','lie down']
 
-Paloma = Pet("Paloma","Jack Russell",tricks,"Weird grunting & heavy noises")
+Paloma = Pet("Paloma","Jack Russell",tricks,"Weird grunting & heavy breathing")
 
 Patrick = Ninja("Patrick","McLaughlin",my_treats,my_pet_food, Paloma)
 
