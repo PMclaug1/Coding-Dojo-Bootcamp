@@ -4,8 +4,6 @@ app = Flask(__name__)
 @app.route('/')          
 def hello_world():
     return 'Hello World!' 
-if __name__=="__main__":    
-    app.run(debug=True)    
 
 @app.route('/dojo')
 def success():
@@ -20,3 +18,6 @@ def hi(name):
 @app.route('/repeat/<string:provide>/<int: num>')
 def repeat(string, num):
     return f"{string * num}"
+
+if __name__=="__main__":    
+    app.run(debug=True)    
