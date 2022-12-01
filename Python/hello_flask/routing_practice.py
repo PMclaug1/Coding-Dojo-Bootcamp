@@ -1,5 +1,6 @@
 from flask import Flask  
 app = Flask(__name__)    
+
 @app.route('/')          
 def hello_world():
     return 'Hello World!' 
@@ -16,6 +17,6 @@ def hi(name):
     return "Hi, " + name
 
 
-@app.route('/success/<string:provide>/<int: num>')
-def provide(string, num):
+@app.route('/repeat/<string:provide>/<int: num>')
+def repeat(string, num):
     return f"{string * num}"
