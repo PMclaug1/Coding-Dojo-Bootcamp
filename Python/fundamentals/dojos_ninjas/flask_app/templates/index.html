@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
     <title>Dojos</title>
 </head>
 <body>
-    <div>
-        <!-- //dojo form// -->
-        <div>    
-            <h1>New Dojo</h1>
-            <form action="/dojos/create" method="post">
-                <p>Name</p>
-                <input type="text" name="name" id="name">
-                <button>Add Dojo</button>
+    <!-- //dojo form// -->
+    <div class="d-flex justify-content-around">    
+            <form action="/dojos/create" method="post" class="col-5 bg-dark text-light">
+                <h1 class="text-center">New Dojo</h1>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control">
+                <button class="btn btn-primary">Add Dojo</button>
             </form>
-        </div>
         <!-- //dojo info// -->
-        <div>
+        <div class="col-5 bg-dark text-light text-center">
             <h1>All Dojos</h1>
             {% for one_dojo in all_dojos %}
-            <p><a href="/dojos/{{one_dojo.id}}/view">{{one_dojo.name}}</a></p>
+            <p><a href="/dojos/{{one_dojo.id}}">{{one_dojo.name}}</a></p>
             {%endfor%}
-        </div>  
-    </div>
-    <p><a href="/ninjas/new">New Ninja</a></p>
+        </div>
+    </div>  
+    <p class="text-center mx-auto"><a href="/ninjas/new">New Ninja</a></p>
 </body>
 </html>

@@ -34,7 +34,7 @@ class Dojo:
     def get_one(cls,data):
         query = """
             SELECT * FROM dojos LEFT JOIN ninjas ON dojos.id = ninjas.dojo_id
-            WHERE ninjas.id = %(id)s;
+            WHERE dojos.id = %(id)s;
         """
         results = connectToMySQL(DATABASE).query_db(query,data)
         if results:
@@ -47,8 +47,8 @@ class Dojo:
                     'id': row_in_db['ninjas.id'],
                     'first_name': row_in_db['first_name'],
                     'last_name': row_in_db['last_name'],
-                    'age': row_in_db['age'],
                     'dojo_id': row_in_db['dojo_id'],
+                    'age': row_in_db['age'],
                     'created_at': row_in_db['ninjas.created_at'],
                     'updated_at': row_in_db['ninjas.updated_at']
                 }
@@ -57,5 +57,3 @@ class Dojo:
             dojo_instance.ninjas = ninjas_list
             return ninja_instance
         return False
-
-

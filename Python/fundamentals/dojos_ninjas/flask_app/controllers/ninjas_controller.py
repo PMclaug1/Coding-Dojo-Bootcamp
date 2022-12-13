@@ -8,7 +8,8 @@ def new_ninja_form():
     all_dojos = Dojo.get_all()
     return render_template("ninjas_new.html", all_dojos=all_dojos)
 
+
 @app.route("/ninjas/create", methods=['POST'])
 def create_ninja():
-    Dojo.create(request.form)
-    return redirect('/dojos')
+    Ninja.create(request.form)
+    return redirect('/dojos/<int:id>')
