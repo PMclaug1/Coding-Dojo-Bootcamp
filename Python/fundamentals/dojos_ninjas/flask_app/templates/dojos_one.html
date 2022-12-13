@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Show</title>
+</head>
+<body>
+    {% for one_dojo in all_dojos %}
+    <p><a href="/dojos/{{one_dojo.id}}/view">{{one_dojo.name}}</a>
+    {%endfor%}
+    <h3>{{one_dojo.name}} has {{one_dojo.ninjas|length}} ninjas:</h3>
+    {% for one_ninja in one_dojo.ninjas %}
+    <p>{{one_ninja.first_name}}</p>
+    {%endfor%}
+    <a href="/dojos">Home</a>
+</body>
+</html>
