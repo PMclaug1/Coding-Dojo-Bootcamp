@@ -1,5 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app import DATABASE
+from flask_app.models import award_model
 
 class Dog:
     def __init__(self,data) -> None:
@@ -22,6 +23,7 @@ class Dog:
             this_dog_instance = cls(one_row)
             all_dogs.append(this_dog_instance)
         return all_dogs
+    
     @classmethod
     def create(cls,data):
         query = """
@@ -33,11 +35,28 @@ class Dog:
     @classmethod
     def get_one(cls,data):
         query = """
-            SELECT * FROM dogs WHERE dogs.id = %(id)s;
+            SELECT * FROM dogs LEFT JOIN awards ON dogs.id = awards.dog_id
+            WHERE dogs.id = %(id)s;
         """
         results = connectToMySQL(DATABASE).query_db(query,data)
         if results:
-            return cls(results[0])
+            dog_instance = cls(results[0])
+            awards_list = []
+            for row_in_db in results:
+                if row_in_db['awards.id'] == None:
+                    return dog_instance
+                award_data ={
+                    'id': row_in_db['awards.id'],
+                    'title': row_in_db['title'],
+                    'dog_id': row_in_db['dog_id'],
+                    'created_at': row_in_db['awards.created_at'],
+                    'updated_at': row_in_db['awards.updated_at']
+                }
+                award_instance = award_model.Award(award_data)
+                awards_list.append(award_instance)
+            dog_instance.awards = awards_list
+            return dog_instance
+        return False
 
     @classmethod
     def update(cls,data):

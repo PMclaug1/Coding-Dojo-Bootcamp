@@ -9,7 +9,10 @@
 <body>
     <h1>Show Dog Page</h1>
     <p>{{one_dog.name}} is a {{one_dog.age}} years old {{one_dog.breed}}</p>
-
+    <h3>{{one_dog.name}} has won {{one_dog.awards|length}} awards:</h3>
+    {% for one_award in one_dog.awards %}
+    <p>{{one_award.title}}</p>
+    {%endfor%}
     <a href="/dogs/new">Add a Dog</a>|
     <a href="/">back</a>
 </body>
