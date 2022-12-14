@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Plan a Party</title>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <h1>Add a Party</h1>
+            <a href="/dashboard" class="btn btn-primary">Home</a>
+        </div>
+        {% for message in get_flashed_messages()%}
+        <p class="text-danger">{{message}}</p>
+        {%endfor%}
+        <form action="/parties/create", method="post">
+            <label for="what">What</label>
+            <input type="text" name="what" id="what">
+            <label for="location">Where</label>
+            <input type="text" name="location" id="location">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date">
+            <div>
+                <p>All Ages:</p>
+                <label for="true">True</label>
+                <input type="radio" name="all_ages" id="true" value="1">
+                <label for="false">False</label>
+                <input type="radio" name="all_ages" id="false" value="0">
+            </div>
+            <label for="description">Description</label>
+            <textarea name="description" id="" cols="30" rows="10"></textarea>
+            <button class="btn btn-primary">Add Party</button>
+        </form>
+    </div>
+</body>
+</html>

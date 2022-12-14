@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Welcom</title>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <h1>{{logged_user.first_name}}'s Parties</h1>
+            <a href="/dashboard" class="btn btn-primary">Home</a>
+        </div>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>What</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>All Ages</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for one_party in logged_user.parties%}
+                <tr>
+                    <td>{{one_party.what}}</td>
+                    <td>{{one_party.location}}</td>
+                    <td>{{one_party.date}}</td>
+                    <td>{%if one_party.all_ages == 1%} True {%else%} False {%endif%}</td>
+                    <td>
+                        <a href="/parties/{{one_party.id}}/view">View</a>
+                        | <a href="/parties/{{one_party.id}}/edit">Edit</a>
+                        | <a href="/parties/{{one_party.id}}/delete">Delete</a>
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+            <a href="/parties/new">Add a Party</a>
+        </table>
+    </div>
+</body>
+</html>
