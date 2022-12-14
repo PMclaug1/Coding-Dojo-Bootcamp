@@ -1,6 +1,10 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app import DATABASE
 from flask_app.models import award_model
+from flask import flash
+import re
+
+ALPHANUMERIC = re.compile(r"^[a-zA-Z0-9]+$")
 
 class Dog:
     def __init__(self,data) -> None:
@@ -72,3 +76,23 @@ class Dog:
             DELETE FROM dogs WHERE dogs.id = %(id)s;
         """
         return connectToMySQL(DATABASE).query_db(query,data)
+
+    @staticmethod
+    def validator(potential_dog):
+        is_valid = True
+        if len(potential_dog['name']) <1:
+            is_valid = False
+            flash("Name required")
+        elif not ALPHANUMERIC.match(potential_dog['name']):
+            is_valid = False
+            flash("Nmae cannot contain special characters.")
+        if len(potential_dog['breed']) <1:
+            is_valid = False
+            flash("Breed required")
+        if len(potential_dog['age']) <1:
+            is_valid = False
+            flash("Age required")
+        elif int(potential_dog['age']) < 0:
+            is_valid = False
+            flash("Age should be positive")
+        return is_valid

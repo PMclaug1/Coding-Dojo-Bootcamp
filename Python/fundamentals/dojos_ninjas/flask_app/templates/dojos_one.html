@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="card-body">
-        <h2 class="card-title text-primary">{{one_dojo.name}} Ninjas</h2>
+        <h2 class="title">{{one_dojo.name}}&nbsp;Ninjas</h2>
         <table class="table table-info">
             <thead>
                 <tr>
@@ -20,11 +20,11 @@
             </thead>
 
             <tbody>
-                {% for one_ninja in one_dojo.ninja %}
+                {% for one_ninja in one_dojo.ninjas %}
                 <tr>
-                    <td>{{ one_ninja.first_name }}</td>
-                    <td>{{ one_ninja.last_name }}</td>
-                    <td>{{ one_ninja.age }}</td>
+                    <td>{{one_ninja.first_name}}</td>
+                    <td>{{one_ninja.last_name}}</td>
+                    <td>{{one_ninja.age}}</td>
                 </tr>
                 {% endfor %}
             </tbody>

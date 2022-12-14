@@ -24,6 +24,8 @@ def new_dog_form():
 
 @app.route("/dogs/create", methods=['POST'])
 def create_dog():
+    if not Dog.validator(request.form):
+        return redirect('/dogs/new')
     Dog.create(request.form)
     return redirect('/')
 

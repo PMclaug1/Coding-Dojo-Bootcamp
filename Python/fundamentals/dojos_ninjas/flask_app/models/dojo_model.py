@@ -42,7 +42,7 @@ class Dojo:
             ninjas_list = []
             for row_in_db in results:
                 if row_in_db['ninjas.id'] == None:
-                    return ninja_instance
+                    return dojo_instance
                 ninja_data ={
                     'id': row_in_db['ninjas.id'],
                     'first_name': row_in_db['first_name'],
@@ -55,5 +55,5 @@ class Dojo:
                 ninja_instance = ninja_model.Ninja(ninja_data)
                 ninjas_list.append(ninja_instance)
             dojo_instance.ninjas = ninjas_list
-            return ninja_instance
+            return dojo_instance
         return False
