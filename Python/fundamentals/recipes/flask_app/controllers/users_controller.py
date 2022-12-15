@@ -2,6 +2,7 @@ from flask_app import app
 from flask import render_template, redirect, request, flash, session
 from flask_bcrypt import Bcrypt
 from flask_app.models.user_model import User
+from flask_app.models.recipe_model import Recipe
 
 bcrypt = Bcrypt(app)
 
@@ -52,4 +53,6 @@ def dashboard():
         'id':session['user_id']
     }
     logged_user = User.get_by_id(data)
-    return render_template("welcome.html", logged_user=logged_user)
+    all_recipes = Recipe.get_all()
+    return render_template("welcome.html", logged_user=logged_user, all_recipes=all_recipes)
+
