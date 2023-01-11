@@ -8,19 +8,19 @@ class Ninja {
     }
     sayName(){
         console.log(`${this.name}`)
+        return this
     }
     showStats(){
-        console.log(`${this.name}, ${this.health}, ${this.speed}, ${this.strength}`)
+        console.log(`Name: ${this.name}, Health: ${this.health}, Speed: ${this.speed}, Strength: ${this.strength}`)
+        return this
     }
     drinkSake(){
         this.health += 10;
-        console.log(this.health)
+        console.log(`${this.name} Drank Sake. Health: ${this.health}`)
         return this
     }
 }
 
 const ninja1 = new Ninja ("Patrick", 50)
 
-ninja1.sayName()
-ninja1.showStats()
-ninja1.drinkSake()
+ninja1.sayName().showStats().drinkSake();
