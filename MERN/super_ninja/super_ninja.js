@@ -22,4 +22,6 @@ class Ninja {
 
 const ninja1 = new Ninja ("Patrick", 50)
 
-ninja1.sayName().showStats().drinkSake();
+// ninja1.sayName().showStats().drinkSake();
+
+module.exports = Ninja;
