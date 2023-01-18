@@ -1,18 +1,25 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class PersonComponent extends Component{
-    render(){
-        return(
+const PersonComponent = (props) => {
+
+        let [age, setAge] = useState(props.age)
+
+        const {firstName, lastName, hairColor} = props;
+
+        const addOne = () => {
+            setAge(age + 1)
+        }
+
+    return (
             <div>
                 <div>
-                    <h1>{this.props.lastName}, {this.props.firstName}</h1>
-                    <p>Age: {this.props.age}</p>
-                    <p>Hair Color: {this.props.hairColor}</p>
+                    <h1>{lastName}, {firstName}</h1>
+                    <p>Age: {age}</p>
+                    <p>Hair Color: {hairColor}</p>
+                    <button onClick={addOne}>Birthday button for {firstName} {lastName}</button>
                 </div>
             </div>
-        );
-
-    }
+    )
 }
 
 export default PersonComponent;
