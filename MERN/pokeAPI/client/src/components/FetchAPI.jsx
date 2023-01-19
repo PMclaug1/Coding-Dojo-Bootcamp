@@ -37,4 +37,5 @@ const FetchAPI = () => {
     )
 }
 
-expor
+export default FetchAPI
+
