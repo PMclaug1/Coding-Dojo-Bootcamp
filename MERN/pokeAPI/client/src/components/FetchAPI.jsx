@@ -1,41 +1,38 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
 
-const FetchAPI = () => {
-
+const AxiosPokemon = () => {
+    
     const [pokemons, setPokemons] = useState([]);
 
     const fetchData = () => {
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
+        axios.get("https://pokeapi.co/api/v2/pokemon?limit=870&offset=0")
         .then((response) => {
-            // console.log(response)
-            return response.json()
-        })
-        .then((response) => {
-            console.log(response)
-            setPokemons(response)
+            console.log("This is the .then function: ", response)
+            setPokemons(response.data.results);
         })
         .catch((error) => {
-            console.log("This is a catch error:  ", error)
+            console.log("This is a catch : ", error);
         })
-        console.log("I'm doing my other tasks while waiting for response")
+        console.log("Running before our promise")
     }
-
-    return (
+    
+    return(
         <div>
             <h1>Pokemon API</h1>
             <button onClick={fetchData}>Fetch Pokemon</button>
             {
-                pokemons.map((p, i) => {
-                    return(
-                        <div key={i}>
-                            <h1>{p.name}</h1>
+                pokemons.map((pokemon, index) => {
+                    return (
+                        <div key={index}>
+                            <h1>{pokemon.name}</h1>
                         </div>
-                    )
+                    );
                 })
             }
         </div>
     )
 }
 
-export default FetchAPI
 
+export default AxiosPokemon
