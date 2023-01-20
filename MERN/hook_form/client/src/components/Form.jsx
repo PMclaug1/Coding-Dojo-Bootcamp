@@ -14,7 +14,7 @@ const Form = (props) => {
     return (
         <div>
             <h1>User Form</h1>
-            <form> 
+            <form className='w-50 p-3 mx-auto'> 
                 <div className='form-group'>
                     <label>First Name:</label>
                     <input onChange={onChange} type="text" name="firstName" className='form-control'/>
