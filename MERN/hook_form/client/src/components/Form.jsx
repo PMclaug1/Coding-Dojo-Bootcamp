@@ -1,74 +1,62 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const Form = () => {
-    const [firstname, setFirstName] = useState("")
-    const [lastname, setLastName] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+const Form = (props) => {
+    const {inputs, setInputs} = props;
 
-    let [listOfUsers, setListOfUsers] = useState([])
+    const onChange = (e) => {
+        setInputs({
+        ...inputs,
+        [e.target.name]: e.target.value,
+    });
 
-    const submitHandler = (e) => {
-        e.preventDefault()
-        //New inbound data
-        let userObj = {firstname, lastname, email, password}
-        setListOfUsers([...listOfUsers, userObj]);
-    }
-
-    const deleteUser = (e, idx) => {
-
-        let copy = listOfUsers.filter((p, i) => {
-            return i !== idx;
-        })
-        setListOfUsers(copy)
     }
 
     return (
         <div>
-        <h1>User Form</h1>
-        <form onSubmit={submitHandler}> 
-            <div className='form-group'>
-                <label>First Name:</label>
-                <input onChange={(e) => setFirstName(e.target.value) } type="text" className='form-control'/>
-                {
-                    firstname.length < 3 && firstname.length > 0 ? <p className='text-danger'>Name must be 3 characters long</p> : ""
-                }
-            </div>
+            <h1>User Form</h1>
+            <form> 
+                <div className='form-group'>
+                    <label>First Name:</label>
+                    <input onChange={onChange} type="text" name="firstName" className='form-control'/>
+                    {
+                        <p>
+                            {inputs.firstName.length < 3 && inputs.firstName.length > 0 ? "First name must be at least 3 characters" : ""}
+                        </p>
+                    }
+                </div>
 
-            <div className='form-group'>
-                <label>Last Name:</label>
-                <input onChange={(e) => setLastName(e.target.value) } type="text" className='form-control'/>
-            </div>
-            <div className='form-group'>
-                <label>Email:</label>
-                <input onChange={(e) => setEmail(e.target.value) } type="text" className='form-control'/>
-            </div>
-            <div className='form-group'>
-                <label>Password:</label>
-                <input onChange={(e) => setPassword(e.target.value) } type="text" className='form-control'/>
-            </div>
-            <div className='form-group'>
-                <label>Confirm Password:</label>
-                <input onChange={(e) => setPassword(e.target.value) } type="text" className='form-control'/>
-            </div>
-            <br />
-            <button type="submit" className='btn btn-outline-warning'>Add Me</button>
-        </form>
-            {
-                listOfUsers.map((user, i) => { 
-                    return(
-                        <div key={i}>
-                        <h3>{user.firstname}</h3>
-                        <h3>{user.lastname}</h3>
-                        <h3>{user.email}</h3>
-                        <h3>{user.password}</h3>
-                        <br />
-                        <button onClick={(e) => deleteUser(e, i)} className="btn btn-danger">Delete Me</button>
-                        </div>
-                    ) })
-            }
+                <div className='form-group'>
+                    <label>Last Name:</label>
+                    <input onChange={onChange} type="text" name="lastName" className='form-control'/>
+                    <p>
+                        {inputs.lastName.length < 3 && inputs.lastName.length > 0 ? "Last name must be at least 3 characters" : ""}
+                    </p>
+                </div>
+                <div className='form-group'>
+                    <label>Email:</label>
+                    <input onChange={onChange} type="email" name="email" className='form-control'/>
+                    <p>
+                        {inputs.email.length < 8 && inputs.email.length > 0 ? "Email must be at least 8 characters" : ""}
+                    </p>
+                </div>
+                <div className='form-group'>
+                    <label>Password:</label>
+                    <input onChange={onChange} type="password" name="password" className='form-control'/>
+                    <p>
+                        {inputs.password.length < 8 && inputs.password.length > 0 ? "Password must be at least 8 characters" : ""}
+                    </p>
+                </div>
+                <div className='form-group'>
+                    <label>Confirm Password:</label>
+                    <input onChange={onChange} type="password" name="confirmPassword" className='form-control'/>
+                    <p>
+                        {inputs.confirmPassword.length < 8 && inputs.confirmPassword.length > 0 ? "Password must be at least 8 characters " : ""}
+                        {inputs.password !== inputs.confirmPassword ? "Passwords do not match" : ""}
+                    </p>
+                </div>
+            </form>
         </div>
-    )
-}
+    );
+};
 
 export default Form
