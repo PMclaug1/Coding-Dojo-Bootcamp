@@ -12,11 +12,11 @@ const Planets = (props) => {
 
     useEffect(() => {
         axios.get("https://swapi.dev/api/planets/" + id + "/")
-        .then((response) => {
-            console.log(response.data)
-            setPlanets(response.data);
-        })
-        .catch(() => navigate("/error"));
+            .then((response) => {
+                console.log(response.data)
+                setPlanets(response.data);
+            })
+            .catch(() => navigate("/error"));
     }, [id]);
 
     if(planets == null) {

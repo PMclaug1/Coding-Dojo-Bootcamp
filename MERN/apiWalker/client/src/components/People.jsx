@@ -13,11 +13,11 @@ const People = (props) => {
 
     useEffect(() => {
         axios.get("https://swapi.dev/api/people/" + id + "/")
-        .then((response) => {
-            console.log(response.data)
-            setPeople(response.data);
-        })
-        .catch(() => navigate("/error"));
+            .then((response) => {
+                console.log(response.data)
+                setPeople(response.data);
+            })
+            .catch(() => navigate("/error"));
     }, [id]);
 
     if(people == null) {
