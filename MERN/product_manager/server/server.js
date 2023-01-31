@@ -11,7 +11,7 @@ app.use(cors())
 
 require('./config/mongoose.config')
 
-const Routes = require('./routes/song.routes')
+const Routes = require('./routes/product.routes')
 Routes(app)
 
 app.listen(port, () => console.log(`Connected to ${port}`))

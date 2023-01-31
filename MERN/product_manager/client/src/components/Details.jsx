@@ -4,22 +4,21 @@ import axios from 'axios'
 import { useParams } from 'react-router'
 
 const Details = () => {
-    const [song, setSong] = useState("")
+    const [product, setProduct] = useState("")
     const {id} = useParams()
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/songs/${id}`)
-        .then((res) => setSong(res.data))
+        axios.get(`http://localhost:8000/api/product/${id}`)
+        .then((res) => setProduct(res.data))
         .catch(err => console.log('This is our details page: ' + err))
     }, [id])
 
     return (
         <div>
-            <h1>Song Details</h1>
-            <p>Title: {song.title}</p>
-            <p>Artist: {song.artist}</p>
-            <p>Rating: {song.rating}</p>
-            <p>Top 100: {song.top100 ? "Yes" : "No"}</p>
+            <h1>Product Details</h1>
+            <p>Title: {product.title}</p>
+            <p>Description: {product.description}</p>
+            <p>Price: {product.rating}</p>
             <p><button className='btn btn-outline-primary'><Link to={'/'}>Home</Link></button></p>
 
         </div>

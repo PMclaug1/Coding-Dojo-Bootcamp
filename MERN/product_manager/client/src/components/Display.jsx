@@ -4,22 +4,22 @@ import axios from 'axios'
 
 
 const Display = () => {
-    const [songList, setSongList] = useState([])
+    const [productList, setProductList] = useState([])
 
     const [deleteToggle, setDeleteToggle] = useState(false)
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/songs')
+        axios.get('http://localhost:8000/api/products')
         .then((res) => {
             console.log('display page data', res.data)
-            setSongList(res.data)
+            setProductList(res.data)
         })
         .catch((err) => {console.log('Display page error: ', err)})
     }, [deleteToggle])
 
     const handleDelete = (e, id) => {
         console.log(`Deleting ${id}`, e)
-        axios.delete(`http://localhost:8000/api/song/${id}`)
+        axios.delete(`http://localhost:8000/api/product/${id}`)
         .then((res) => {
             setDeleteToggle(!deleteToggle)
         })
@@ -28,30 +28,28 @@ const Display = () => {
 
     return (
         <div>
-            <h1>SongBird</h1>
-            <button className='btn btn-outline-success'><Link to={'/create'}>Add a Song</Link></button>
+            <h1>All Products</h1>
+            <button className='btn btn-outline-success'><Link to={'/create'}>Add a Product</Link></button>
             <table className='table'>
                 <thead>
                     <tr>
                         <th>Title</th>
-                        <th>Artist</th>
-                        <th>Rating</th>
-                        <th>Top 100</th>
+                        <th>Description</th>
+                        <th>Price</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        songList.map((song, idx) => {
+                        productList.map((product, idx) => {
                             return(
                                 <tr key={idx}>
-                                    <td>{song.title}</td>
-                                    <td>{song.artist}</td>
-                                    <td>{song.rating}</td>
-                                    <td>{song.top100 ? "Yes" : "No"}</td>
-                                    <td><button className='btn btn-info'><Link to={`/details/${song._id}`}>View</Link></button> | 
-                                    <button className='btn btn-success'><Link to={`/update/${song._id}`}>Edit</Link></button> | 
-                                    <button className='btn btn-danger' onClick={(e) => {handleDelete(e, song._id)}}>Delete</button></td>
+                                    <td>{product.title}</td>
+                                    <td>{product.description}</td>
+                                    <td>{product.price}</td>
+                                    <td><button className='btn btn-info'><Link to={`/details/${product._id}`}>View</Link></button> | 
+                                    <button className='btn btn-success'><Link to={`/update/${product._id}`}>Edit</Link></button> | 
+                                    <button className='btn btn-danger' onClick={(e) => {handleDelete(e, product._id)}}>Delete</button></td>
                                 </tr>
                             )
                         })

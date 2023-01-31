@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const database = "MernDemo23"
+const database = "ProductManager"
 
 mongoose.connect(`mongodb://127.0.0.1:27017/${database}`, {
     useNewUrlParser: true,
