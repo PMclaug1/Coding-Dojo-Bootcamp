@@ -32102,3 +32102,34 @@ MERN/Working full CRUD/server/node_modules/whatwg-url/lib/URLSearchParams.js
 MERN/Working full CRUD/server/node_modules/whatwg-url/lib/utils.js
 MERN/Working full CRUD/server/node_modules/whatwg-url/lib/VoidFunction.js
 MERN/Working full CRUD/server/routes/song.routes.js
+MERN/login-reg/auth/server/models/user.model.js
+MERN/login-reg/auth/client/package-lock.json
+MERN/login-reg/auth/client/package.json
+MERN/login-reg/auth/client/README.md
+MERN/login-reg/auth/client/public/favicon.ico
+MERN/login-reg/auth/client/public/index.html
+MERN/login-reg/auth/client/public/logo192.png
+MERN/login-reg/auth/client/public/logo512.png
+MERN/login-reg/auth/client/public/manifest.json
+MERN/login-reg/auth/client/public/robots.txt
+MERN/login-reg/auth/client/src/App.css
+MERN/login-reg/auth/client/src/App.js
+MERN/login-reg/auth/client/src/App.test.js
+MERN/login-reg/auth/client/src/index.css
+MERN/login-reg/auth/client/src/index.js
+MERN/login-reg/auth/client/src/logo.svg
+MERN/login-reg/auth/client/src/reportWebVitals.js
+MERN/login-reg/auth/client/src/setupTests.js
+MERN/login-reg/auth/client/src/views/Cookie.jsx
+MERN/login-reg/auth/client/src/views/DisplayUsers.jsx
+MERN/login-reg/auth/client/src/views/Login.jsx
+MERN/login-reg/auth/client/src/views/Register.jsx
+MERN/login-reg/auth/client/src/views/UserInfo.jsx
+MERN/login-reg/auth/server/.env
+MERN/login-reg/auth/server/package-lock.json
+MERN/login-reg/auth/server/package.json
+MERN/login-reg/auth/server/server.js
+MERN/login-reg/auth/server/config/jwt.config.js
+MERN/login-reg/auth/server/config/mongoose.config.js
+MERN/login-reg/auth/server/controllers/user.controller.js
+MERN/login-reg/auth/server/routes/user.routes.js
