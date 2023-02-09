@@ -33,10 +33,12 @@ public class CafeUtil {
 
 
     public void addCustomer(ArrayList<String> customerArray){
+    System.out.println("Please enter your name:");
+    String userName = System.console().readLine();
+    System.out.println("Hello, " + userName);
     customerArray.add("Heidi");
     customerArray.add("Paul");
     customerArray.add("Peter");
     customerArray.add("Mary");
-    String userName = System.console().readLine();
     }
 }
