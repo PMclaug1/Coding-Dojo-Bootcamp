@@ -9,25 +9,27 @@ public class CafeUtil {
         sum += i;
     }
     System.out.println(sum);
-}
+    return sum;
+    }
 
     // double getOrderTotal(double[] prices)
-    public getOrderTotal(double[] prices){
-        int sum = 0;
-        for(int i = 0; i < prices.length; i++){
-            sum += prices[i];
-        }
-        System.out.println(sum);
-    }
+    // public getOrderTotal(double[] prices){
+    //     double sum = 0;
+    //     for(int i = 0; i < prices.length; i++){
+    //         sum += prices[i];
+    //     }
+    //     System.out.println(sum);
+    // }
 
-    // void displayMenu(ArrayList<String> menuItems)
-    public void displayMenu(ArrayList<String>menuItems){
-        for (int i = 0; i < menuItems.length; i++) {
-            String name = menuItems.get(i);
-        }
-        System.out.println(int name + menuItems[i]);
-    }
+    // // void displayMenu(ArrayList<String> menuItems)
+    // public void displayMenu(ArrayList<String>menuItems){
+    //     for (int i = 0; i < menuItems.length; i++) {
+    //         String name = menuItems.get(i);
+    //     }
+    //     System.out.println(int name + menuItems[i]);
+    // }
 
-    // addCustomer(ArrayList<String> customers)
-
+    // public void addCustomer(ArrayList<String> customerArray)
+    // customerArray.add("Heidi");
+    // String userName = System.console().readLine();
 }
