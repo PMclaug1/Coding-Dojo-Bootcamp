@@ -45,7 +45,7 @@ class SinglyLinkedList {
             runner = runner.next;
             this.insertAtBackRecursive(data, runner);
         }
-        else{
+        else {
             this.head = new ListNode(data);
         }
     }
@@ -66,13 +66,13 @@ class SinglyLinkedList {
 
     //Insert Node to the front
     insertAtFront(data) {
-    let headNodeVariable = this.head;
-    this.head = new ListNode(data);
-    this.head.next = headNodeVariable;
+        let headNodeVariable = this.head;
+        this.head = new ListNode(data);
+        this.head.next = headNodeVariable;
     }
 
     //Insert each value of an array into the front of a Singly Linked List
-    seedFromArr(array){
+    seedFromArr(array) {
         if (array.length > 0) {
             for (let i = 0; i < array.length; i++) {
                 this.insertAtFront(array[i]);
@@ -85,7 +85,7 @@ class SinglyLinkedList {
         if (!this.isEmpty()) {
             let array = [];
             let current = this.head;
-            while(current.next !== null) {
+            while (current.next !== null) {
                 array.push(current.data);
                 current = current.next;
             }
@@ -96,29 +96,29 @@ class SinglyLinkedList {
 
 
     // Remove Head
-    removeHead () {
-    if (!this.isEmpty()) {
-        this.head = this.head.next;
-    }
+    removeHead() {
+        if (!this.isEmpty()) {
+            this.head = this.head.next;
+        }
     }
 
     // Remove from Back
     removeFromBack() {
-    if (this.isEmpty()) {
-        console.log("List is empty. Nothing to remove.")
-        return null
-    } 
-    else {
-        let current = this.head
-        while (current.next.next !== null) {
-        current = current.next
+        if (this.isEmpty()) {
+            console.log("List is empty. Nothing to remove.")
+            return null
         }
-        
-        const data = current.next.data
-        this.last = current
-        this.last.next = null
-        console.log(`Removed ${data} from the end of the list`)
-        return data
+        else {
+            let current = this.head
+            while (current.next.next !== null) {
+                current = current.next
+            }
+
+            const data = current.next.data
+            this.last = current
+            this.last.next = null
+            console.log(`Removed ${data} from the end of the list`)
+            return data
         }
     }
 
@@ -127,7 +127,7 @@ class SinglyLinkedList {
     contains(value) {
         if (!this.isEmpty()) {
             let current = this.head;
-            while(current != null) {
+            while (current != null) {
                 if (current.data == value) {
                     return true;
                 }
@@ -139,33 +139,68 @@ class SinglyLinkedList {
 
     //Search a singly linked list recursively
     containsRecursive(value, current = this.head) {
-        if(current === null){
+        if (current === null) {
             return false
         }
-        if(current.data === value){
+        if (current.data === value) {
             return true
         }
-    
+
         return this.containsRecursive(value, current.next)
     }
 
     //Determine the average of the values in a singly linked list, recursively
-    average(count=0, sum=0, current=this.head) {
-        if(this.isEmpty()){
+    average(count = 0, sum = 0, current = this.head) {
+        if (this.isEmpty()) {
             return NaN
         }
-        if(Number.isNaN(this.data)){
+        if (Number.isNaN(this.data)) {
             return NaN
         }
-        if(current.next === null){    
+        if (current.next === null) {
             count += 1
             sum += current.data
-            return "The average is " + sum/count
+            return "The average is " + sum / count
         }
         count += 1
         sum += current.data
         return this.average(count, sum, current.next)
     }
+
+    secondToLast() {
+        let data = null;
+        if (!this.isEmpty()){
+            if (this.head.next !== null) {
+                let pointer = this.head;
+                while(pointer.next.next !== null) {
+                    pointer = pointer.next;
+                }
+                data = pointer.value;
+            }
+        }
+        return data;
+
+    }
+
+    removeVal(val) {
+        if (!this.isEmpty()) {
+            if (this.head.value == val) {
+                this.head = this.head.next;
+                return true;
+            }
+            let pointer = this.head;
+            while(pointer.next !== null) {
+                if (pointer.next.value == val) {
+                    pointer.next = pointer.next.next;
+                    return true;
+                }
+                pointer = pointer.next
+            }
+        }
+        return false
+    }
+
+    
 
 
 
@@ -184,7 +219,7 @@ list1.insertAtBack(200);
 list1.insertAtBackRecursive(250)
 
 //Inserts an array to the front of our singly linked list.
-list1.seedFromArr([0,2])
+list1.seedFromArr([0, 2])
 
 //Remove node from the front
 list1.removeHead()
