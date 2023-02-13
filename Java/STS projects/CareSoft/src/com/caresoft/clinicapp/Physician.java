@@ -5,23 +5,28 @@ import java.util.Date;
 
 public class Physician extends User implements HIPPACompliantUser {
 
+
 	public Physician(Integer id) {
 		super (id);
+
 	}
 	
 
 	private ArrayList<String> patientNotes;
+	private Integer confirmedAuthID;
 
 	
 	@Override
 	public boolean assignPin(int pin) {
-		
+		this.pin = pin;
 		return false;
 	}
 
 	@Override
 	public boolean accessAuthorized(Integer confirmedAuthID) {
-		
+		if (id == this.confirmedAuthID)
+			return true;
+		else
 		return false;
 	}
 	
