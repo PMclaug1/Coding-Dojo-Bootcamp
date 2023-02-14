@@ -23,7 +23,7 @@ public class MainController {
         model.addAttribute("description", description);
         model.addAttribute("vendor", vendor);
     
-        return "index.jsp";
+        return "Index.jsp";
     }
 
 }
