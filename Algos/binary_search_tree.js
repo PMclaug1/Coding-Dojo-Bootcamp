@@ -102,6 +102,61 @@ min(current = this.root) {
         return this.min(current.left)
     }
 }
+
+max(current = this.root) {
+    // Traverse BST
+    while (current.right) {
+        current = current.right
+    }
+    return current.data
+}
+
+/**
+ * Determines if this tree contains the given searchVal.
+ * @param {number} searchVal The number to search for in the node's data.
+ * @returns {boolean} Indicates if the searchVal was found.
+ */
+contains(searchVal) {
+    // Set root
+    if (this.isEmpty()) {
+        return false;
+    }
+    // Traverse BST
+    let pointer = this.root
+    while (pointer) {
+        if (pointer.data == searchVal) { // Found it
+            return true
+        }
+        searchVal < pointer.data ? pointer = pointer.left : pointer = pointer.right // Continue...
+    }
+    return false;
+}
+
+/**
+ * Determines if this tree contains the given searchVal.
+ * @param {number} searchVal The number to search for in the node's data.
+ * @returns {boolean} Indicates if the searchVal was found.
+ */
+containsRecursive(searchVal, current = this.root) {
+    // Base case: if we get the end and current is null or list is empty
+    if (!current) { 
+        return false
+    }
+    else if (searchVal === current.data) { // Found it
+        return true
+    }
+    // Didn't find it and the list is not empty. Traverse..
+    else {
+        if (searchVal < current.data) {
+            current = current.left  // Traverse left...
+            return this.containsRecursive(searchVal, current)
+        } else {
+            current = current.right // Traverse right...
+            return this.containsRecursive(searchVal, current)
+        }
+    }
+}
+
 const bst = new BinarySearchTree()
 bst.insert(20)
 bst.insert(10)
@@ -113,4 +168,3 @@ bst.insert(50)
 bst.insert(16)
 console.log("The min value in the tree is ", bst.min())
 
-    
