@@ -13,11 +13,11 @@ import com.codingdojo.books.models.Book;
 import com.codingdojo.books.services.BookService;
 
 @RestController
-public class BookController {
+public class BookApi {
 	
 	private final BookService service;
 	
-	public BookController(BookService service) {
+	public BookApi(BookService service) {
 		this.service = service;
 	}
 	
