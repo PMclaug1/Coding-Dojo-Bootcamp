@@ -15,6 +15,7 @@
 </head>
 <body>
 	<div class="container">
+	<h1>All Books</h1>
 		<table class="table">
 		<tr>
 			<th scope="row">ID:</th>
