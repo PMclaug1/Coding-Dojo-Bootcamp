@@ -199,6 +199,43 @@ containsRecursive(searchVal, current = this.root) {
         }
         return this
     }
+
+/**
+ * DFS Preorder: (CurrNode, Left, Right)
+ * Converts this BST into an array following Depth First Search preorder.
+ * Example on the fullTree var:
+ * [25, 15, 10, 4, 12, 22, 18, 24, 50, 35, 31, 44, 70, 66, 90]
+ * @param {Node} node The current node during the traversal of this tree.
+ * @param {Array<number>} vals The data that has been visited so far.
+ * @returns {Array<number>} The vals in DFS Preorder once all nodes visited.
+ */
+toArrPreorder(node = this.root, vals = []) {
+    function traverse(node){
+        vals.push(node.data);
+        if(node.left) traverse(node.left);
+        if(node.right) traverse(node.right);
+    }
+    traverse(this.root);
+    return vals;
+}
+
+/**
+ * DFS Inorder: (Left, CurrNode, Right)
+ * Converts this BST into an array following Depth First Search inorder.
+ * See debugger call stack to help understand the recursion.
+ * Example on the fullTree var:
+ * [4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90]
+ * @param {Node} node The current node during the traversal of this tree.
+ * @param {Array<number>} vals The data that has been visited so far.
+ * @returns {Array<number>} The vals in DFS Preorder once all nodes visited.
+ */
+// toArrInorder(node = this.root, vals = []) {}
+
+
+// toArrPreorder
+// Preorder (Parent, Left, Right): on the provided fullTree var, it should be in this order: [25, 15, 10, 4, 12, 22, 18, 24, 50, 35, 31, 44, 70, 66, 90]
+// toArrInorder
+// Inorder (Left, Parent, Right): on the provided fullTree var, it should be in this order: [4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90]
 }
 
 const bst = new BinarySearchTree()
@@ -211,5 +248,4 @@ bst.insert(22)
 bst.insert(50)
 bst.insert(16)
 console.log("The min value in the tree is ", bst.min())
-
-
+bst.toArrPreorder()

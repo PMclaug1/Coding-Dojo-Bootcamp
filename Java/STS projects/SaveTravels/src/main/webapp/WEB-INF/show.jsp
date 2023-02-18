@@ -19,28 +19,28 @@
 		<table class="table">
 		<tr>
 			<th scope="row">ID:</th>
-			<td><c:out value="${book.id }"></c:out></td>
+			<td><c:out value="${travel.id }"></c:out></td>
 		</tr>
 		<tr>
-			<th scope="row">Title:</th>
-			<td><c:out value="${book.title }"></c:out></td>
+			<th scope="row">Expense:</th>
+			<td><c:out value="${travel.expense }"></c:out></td>
+		</tr>
+		<tr>
+			<th scope="row">Vendor:</th>
+			<td><c:out value="${travel.vendor}" /></td>
+		</tr>
+		<tr>
+			<th scope="row">Amount:</th>
+			<td><c:out value="${travel.amount}" /></td>
 		</tr>
 		<tr>
 			<th scope="row">Description:</th>
-			<td><c:out value="${book.description}" /></td>
-		</tr>
-		<tr>
-			<th scope="row">Language:</th>
-			<td><c:out value="${book.language}" /></td>
-		</tr>
-		<tr>
-			<th scope="row">Number of Pages:</th>
-			<td><c:out value="${book.numberOfPages}" /></td>
+			<td><c:out value="${travel.description}" /></td>
 		</tr>
 		</table>
 		
-		<a href="/books">Home</a>
-		<a href="/books/${book.id}/edit">Edit</a>
+		<a href="/expenses">Home</a>
+		<a href="/expenses/edit/${travel.id}">Edit</a>
 </body>
 </div>
 
