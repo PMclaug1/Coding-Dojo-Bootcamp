@@ -32,7 +32,7 @@
 			<c:forEach var="dojo" items="${dojos}">
 				<tr>
 					<td><c:out value="${dojo.name}"/></td>
-					<td><a href="/dojo/${dojo.id}"><c:out value="See Ninjas"/></a></td>
+					<td><a href="/dojos/${dojo.id}"><c:out value="See Ninjas"/></a></td>
 				</tr>
 			</c:forEach>
 		</tbody>
