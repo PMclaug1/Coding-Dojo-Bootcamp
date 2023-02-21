@@ -236,8 +236,87 @@ toArrPreorder(node = this.root, vals = []) {
 // Preorder (Parent, Left, Right): on the provided fullTree var, it should be in this order: [25, 15, 10, 4, 12, 22, 18, 24, 50, 35, 31, 44, 70, 66, 90]
 // toArrInorder
 // Inorder (Left, Parent, Right): on the provided fullTree var, it should be in this order: [4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90]
+
+
+  /**
+   * Recursively counts the total number of nodes in this tree.
+   * - Time: O(?).
+   * - Space: O(?).
+   * @param {Node} node The current node during the traversal of this tree.
+   * @returns {number} The total number of nodes.
+   */
+  size(node = this.root, count = {val: 0}){
+    //base case
+    if(this.isEmpty()){
+        return count['val'];
+    }
+
+    
+
+    //increment the count each time the function is called
+    count['val']++;
+
+    if(node.left === null && node.right === null){
+        return;
+    }
+
+    if(node.left){
+        this.size(node.left, count);
+    }
+
+    if(node.right){
+        this.size(node.right, count);
+    }
+
+    return count['val'];
+
 }
 
+/**
+ * Calculates the height of the tree which is based on how many nodes from
+ * top to bottom (whichever side is taller).
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Node} node The current node during traversal of this tree.
+ * @returns {number} The height of the tree.
+ */
+height(node = this.root) {
+
+    if(this.isEmpty()){
+        return 0;
+    }
+
+    if(node?.right == null && node?.left == null){
+        return 1;
+    }
+
+    let left = this.height(node.left);
+    let right = this.height(node.right);
+
+    console.log("left: "+left)
+    console.log("right: "+right);
+
+    if(left > right){
+        return left + 1;
+    }
+    else{
+        return right + 1;
+    }
+
+}
+
+isFullTree(node = this.root ){
+
+if( node == null )
+return true;
+
+if( ( !node.left && node.right ) || ( node.left && !node.right ) )
+return false;
+
+return isFullTree( node.left ) && isFullTree( node.right );
+
+    }
+}
 const bst = new BinarySearchTree()
 bst.insert(20)
 bst.insert(10)
