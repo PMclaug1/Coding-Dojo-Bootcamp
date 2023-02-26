@@ -1,22 +1,22 @@
 // Write a function that takes a string and returns count of each character
 
-function charCount(str){
+function charCount(str) {
     // make object to return at end
     var result = {};
     // loop over string for each character
-    for (var i = 0; i < str.length; i++){
+    for (var i = 0; i < str.length; i++) {
         var char = str[i].toLowerCase()
         // test if alphanumeric
         if (/[a-z0-9]/.test(char))
-        // if char is a number/letter & key in object already, add 1
-        if(result[char] > 0) {
-            result[char]++;
-        }
-        // if char is a number/letter & not in object add it and set value to 1
+            // if char is a number/letter & key in object already, add 1
+            if (result[char] > 0) {
+                result[char]++;
+            }
+            // if char is a number/letter & not in object add it and set value to 1
 
-        else{
-            result[char] = 1;
-        }
+            else {
+                result[char] = 1;
+            }
         // if character is something else (punctuation, space etc) dont do anything
 
     }
@@ -25,6 +25,43 @@ function charCount(str){
     console.log(result)
     return result;
 }
+// refactor 1
+
+function charCount2(str) {
+    let obj = {};
+    for (let char of str) {
+        char = char.toLowerCase();
+        if (/[a-z0-9]/.test(char)) {
+            obj[char] = ++obj[char] || 1;
+        }
+    }
+    console.log(obj);
+    return obj;
+}
+
+// Function that takes character coes to give a range for regular expression. Best performance
+function isAlphaNumberic(char) {
+    let code = char.charCodeAt(0);
+    if (!(code > 47 && code < 58) && // numeric (0-9)
+        !(code > 64 && code < 91) && // upper alpha (a-z)
+        !(code > 96 && code < 123)) { // lower alph (a-z)
+        return false;
+    }
+    return true;
+}
+
+function charCountCode(str) {
+    let obj = {};
+    for (let char of str) {
+        char = char.toLowerCase();
+        if (isAlphaNumberic(char)) {
+            obj[char] = ++obj[char] || 1;
+        }
+    }
+    console.log(obj);
+    return obj;
+}
+
 
 charCount("aaaa"); // {a:4}
 charCount("Hello") //{h:1, e:1, l:2, o:1}
@@ -33,3 +70,7 @@ charCount("My phone # is 303-404-505")
 charCount("Hello hi")
 
 charCount("")
+
+charCount2("Testing this count #$02")
+
+charCountCode("This is a test #$!12")
